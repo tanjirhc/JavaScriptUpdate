@@ -1,5 +1,5 @@
 // callback = a function that is passed as an argument to another function.
-sum(displayConsole, 1, 2);
+sum(displayPage, 1, 2);
 
 function sum(callback, x, y){
   let result = x+y;
@@ -8,4 +8,8 @@ function sum(callback, x, y){
 
 function displayConsole(result){
   console.log(result);
+}
+
+function displayPage(result) {
+  document.getElementById('myH1').textContent = result;
 }
