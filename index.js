@@ -1,12 +1,18 @@
 // callback = a function that is passed as an argument to another function.
 
-hello();
-goodBye();
+hello(wait);
 
-function hello() {
-  setTimeout(function () {
-    console.log("hello");
-  }, 3000);
+function hello(callback) {
+  console.log("hello");
+  callback();
+}
+
+function wait(){
+  console.log("Wait!");
+}
+
+function leave(){
+  console.log("Leave!");
 }
 
 function goodBye() {
