@@ -1,20 +1,11 @@
 // callback = a function that is passed as an argument to another function.
+sum(displayConsole, 1, 2);
 
-hello(wait);
-
-function hello(callback) {
-  console.log("hello");
-  callback();
+function sum(callback, x, y){
+  let result = x+y;
+  callback(result);
 }
 
-function wait(){
-  console.log("Wait!");
-}
-
-function leave(){
-  console.log("Leave!");
-}
-
-function goodBye() {
-  console.log("Goodbye!");
+function displayConsole(result){
+  console.log(result);
 }
